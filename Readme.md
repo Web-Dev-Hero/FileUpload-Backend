@@ -44,7 +44,7 @@ Before running this application, ensure you have the following installed:
     npm start
     ```
 
-2. Open your web browser and go to [http://localhost:3000](http://localhost:3000).
+2. Open your web browser and go to [http://localhost:7000](http://localhost:7000).
 
 3. You will see a simple file upload form.
 
