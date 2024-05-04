@@ -1,11 +1,12 @@
-# File Upload using Express.js and express-fileupload
+# File Upload using Express.js and express-fileupload with Cloudinary
 
-This is a simple Node.js application demonstrating file upload functionality using Express.js and express-fileupload middleware.
+This is a Node.js application demonstrating file upload functionality using Express.js and express-fileupload middleware, with file storage managed by Cloudinary.
 
 ## Features
 
 - **File Upload**: Allows users to upload files to the server.
 - **File Validation**: Validates uploaded files based on file types and size.
+- **Cloud Storage**: Utilizes Cloudinary for storing uploaded files in the cloud.
 - **Error Handling**: Handles errors gracefully during file upload.
 
 ## Prerequisites
@@ -15,6 +16,7 @@ Before running this application, ensure you have the following installed:
 - Node.js (https://nodejs.org/)
 - npm (Node.js package manager, comes with Node.js installation)
 - Git (https://git-scm.com/) (optional, for cloning the repository)
+- A Cloudinary account (https://cloudinary.com/) with your cloud credentials.
 
 ## Installation
 
@@ -36,6 +38,20 @@ Before running this application, ensure you have the following installed:
     npm install
     ```
 
+4. Set up Cloudinary credentials:
+
+    Sign up or log in to your Cloudinary account. Obtain your cloud name, API key, and API secret.
+
+    Create a `.env` file in the root directory of your project:
+
+    ```plaintext
+    CLOUDINARY_CLOUD_NAME=your-cloud-name
+    CLOUDINARY_API_KEY=your-api-key
+    CLOUDINARY_API_SECRET=your-api-secret
+    ```
+
+    Replace `your-cloud-name`, `your-api-key`, and `your-api-secret` with your actual Cloudinary credentials.
+
 ## Usage
 
 1. Start the server:
@@ -50,11 +66,11 @@ Before running this application, ensure you have the following installed:
 
 4. Choose a file and click the "Upload" button.
 
-5. The server will process the file upload and display a success or error message.
+5. The server will process the file upload and store it in your Cloudinary account.
 
 ## Configuration
 
-You can configure the maximum file size and allowed file types in the `app.js` file.
+You can configure the maximum file size and allowed file types in the `index.js` file.
 
 ## Contributing
 
@@ -69,3 +85,4 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
