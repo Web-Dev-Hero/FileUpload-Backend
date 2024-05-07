@@ -1,20 +1,24 @@
 let express=require('express')
 let app=express()
 let Db=require('./config/database')
-Db.Dbconnect()
-require('dotenv').config()
-let Upload=require('./routes/fileRouts')
-let cors=require('cors')
-app.use(cors())
-
 
 let cloud=require('./config/cloudernery')
-cloud.CloudIneryConnect()
+require('dotenv').config()
+let Upload=require('./routes/fileRouts')
+
+
+let fileUpload=require('express-fileupload')
+app.use(fileUpload({
+  useTempFiles : true,
+  tempFileDir : '/tmp/'
+}));
+
+
 
 app.use('/api/v1/upload',Upload)
 
-let fileUpload=require('express-fileupload')
-app.use(fileUpload())
+
+
   
 app.use(express.json())
 
@@ -27,4 +31,5 @@ app.listen(port,()=>{
  
 })
  
-
+Db.Dbconnect()
+cloud.CloudIneryConnect()
