@@ -70,7 +70,7 @@ Before running this application, ensure you have the following installed:
 
 ## Configuration
 
-You can configure the maximum file size and allowed file types in the `app.js` file.
+You can configure the maximum file size and allowed file types in the `index.js` file.
 
 ## Contributing
 
@@ -85,3 +85,4 @@ Contributions are welcome! Please follow these steps to contribute:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
